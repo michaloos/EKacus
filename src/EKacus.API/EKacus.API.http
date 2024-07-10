@@ -1,0 +1,6 @@
+@EKacus.API_HostAddress = http://localhost:5067
+
+GET {{EKacus.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
