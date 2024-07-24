@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EKacus.Domain", "src\EKacus
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EKacus.Infrastructure", "src\EKacus.Infrastructure\EKacus.Infrastructure.csproj", "{39869EED-B86D-43AE-81A6-023162EFC79C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EKacus.Web", "src\EKacus.Web\EKacus.Web.csproj", "{753E3480-4A12-4D4D-8E6F-4A92F3E5204D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,5 +35,7 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0EAD0F0A-2F7B-4EF0-A03B-4DDA762A0DB4}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 EndGlobal

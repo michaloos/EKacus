@@ -1,4 +1,6 @@
+using EKacus.Domain.Models;
 using EKacus.Infrastructure.Context;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -8,8 +10,12 @@ builder.Services.AddDbContext<EKacusDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
-// Add services to the container.
 
+builder.Services.AddIdentity<User, IdentityRole>()
+    .AddEntityFrameworkStores<EKacusDbContext>()
+    .AddDefaultTokenProviders();
+
+// Add services to the container.
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -37,6 +43,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseRouting();
+
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

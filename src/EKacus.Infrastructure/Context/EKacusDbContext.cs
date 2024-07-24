@@ -1,23 +1,20 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EKacus.Domain.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace EKacus.Infrastructure.Context
 {
-    public class EKacusDbContext : DbContext
+    public class EKacusDbContext : IdentityDbContext<User>
     {
-        public EKacusDbContext(DbContextOptions options) : base(options) { }
-        //public DbSet<Category> Categories {get;set;}
+        public EKacusDbContext(DbContextOptions<EKacusDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //foreach (var property in modelBuilder.Model.GetEntityTypes()
-            //    .SelectMany(e => e.GetProperties()
-            //        .Where(p => p.ClrType == typeof(string))))
-            //    property.SetColumnType("varchar(150)");
-
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(EKacusDbContext).Assembly);
 
             foreach (var relationship in modelBuilder.Model.GetEntityTypes()
-                .SelectMany(e => e.GetForeignKeys())) relationship.DeleteBehavior = DeleteBehavior.ClientSetNull;
+                .SelectMany(e => e.GetForeignKeys()))
+                relationship.DeleteBehavior = DeleteBehavior.ClientSetNull;
 
             base.OnModelCreating(modelBuilder);
         }
