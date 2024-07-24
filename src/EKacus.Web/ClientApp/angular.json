@@ -72,11 +72,11 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "EKacus.Web:build:production"
+              "buildTarget": "EKacus.Web:build:production"
             },
             "development": {
-              "browserTarget": "EKacus.Web:build:development",
-              "proxyConfig": "proxy.conf.js"
+              "proxyConfig": "proxy.conf.js",
+              "buildTarget": "EKacus.Web:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "EKacus.Web:build"
+            "buildTarget": "EKacus.Web:build"
           }
         },
         "test": {
