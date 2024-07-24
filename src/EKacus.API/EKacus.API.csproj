@@ -21,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\EKacus.Domain\EKacus.Domain.csproj" />
     <ProjectReference Include="..\EKacus.Infrastructure\EKacus.Infrastructure.csproj" />
+    <ProjectReference Include="..\EKacus.Web\EKacus.Web.csproj" />
   </ItemGroup>
 
   <ItemGroup>
