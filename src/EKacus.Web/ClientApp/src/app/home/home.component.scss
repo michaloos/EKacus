@@ -1,0 +1,23 @@
+.promoCard{
+  width: 380px;
+  height: 640px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 127, 255, 0.41);
+}
+
+.home-container {
+  width: 100%;
+  height: 100%;
+}
+
+:host ::ng-deep .fix-card .p-component{
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+
+  .p-card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+}
