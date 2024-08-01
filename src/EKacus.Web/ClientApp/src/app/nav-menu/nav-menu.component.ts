@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MegaMenuItem, MenuItem} from "primeng/api";
 
 @Component({
   selector: 'app-nav-menu',
@@ -6,13 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav-menu.component.css']
 })
 export class NavMenuComponent {
-  isExpanded = false;
 
-  collapse() {
-    this.isExpanded = false;
-  }
-
-  toggle() {
-    this.isExpanded = !this.isExpanded;
-  }
+  protected menuBarItems : MenuItem[] = [
+    {label: 'Użytkownicy', icon: 'pi pi-users', items: [
+        { label: 'Dyrekcja' },
+        { label: 'Nauczyciele' },
+        { label: 'Rodzice' },
+        { label: 'Uczniowie' },
+      ]},
+    { label: 'Klasy', icon: 'pi pi-graduation-cap' },
+    { label: 'Plan zajęć', icon: 'pi pi-calendar-clock' },
+    { label: 'Raporty', icon: 'pi pi-server' },
+  ];
 }
