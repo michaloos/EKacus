@@ -5,9 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EKacus.Domain.Models
+namespace EKacus.Domain.Models;
+
+public class User : IdentityUser<Guid>
 {
-    public class User : IdentityUser
-    {
-    }
 }

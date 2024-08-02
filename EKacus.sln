@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EKacus.API", "src\EKacus.API\EKacus.API.csproj", "{DD403FFA-12EF-415D-B042-A5C0048800D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EKacus.Domain", "src\EKacus.Domain\EKacus.Domain.csproj", "{0B0E174E-D8BA-49F8-AD34-AFF96AAF5464}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EKacus.Domain", "src\EKacus.Domain\EKacus.Domain.csproj", "{0B0E174E-D8BA-49F8-AD34-AFF96AAF5464}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EKacus.Infrastructure", "src\EKacus.Infrastructure\EKacus.Infrastructure.csproj", "{39869EED-B86D-43AE-81A6-023162EFC79C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EKacus.Infrastructure", "src\EKacus.Infrastructure\EKacus.Infrastructure.csproj", "{39869EED-B86D-43AE-81A6-023162EFC79C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EKacus.Web", "src\EKacus.Web\EKacus.Web.csproj", "{753E3480-4A12-4D4D-8E6F-4A92F3E5204D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EKacus.Web", "src\EKacus.Web\EKacus.Web.csproj", "{753E3480-4A12-4D4D-8E6F-4A92F3E5204D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DD403FFA-12EF-415D-B042-A5C0048800D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD403FFA-12EF-415D-B042-A5C0048800D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD403FFA-12EF-415D-B042-A5C0048800D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD403FFA-12EF-415D-B042-A5C0048800D5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0B0E174E-D8BA-49F8-AD34-AFF96AAF5464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0B0E174E-D8BA-49F8-AD34-AFF96AAF5464}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B0E174E-D8BA-49F8-AD34-AFF96AAF5464}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,7 +33,5 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0EAD0F0A-2F7B-4EF0-A03B-4DDA762A0DB4}
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 EndGlobal

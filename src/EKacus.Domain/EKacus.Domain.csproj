@@ -14,8 +14,4 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.7" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\EKacus.Web\EKacus.Web.csproj" />
-  </ItemGroup>
-
 </Project>
